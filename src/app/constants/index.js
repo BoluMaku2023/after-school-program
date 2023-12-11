@@ -8,6 +8,13 @@ const {
   ic_settings,
   ic_increase,
   ic_decrease,
+  approved,
+  schl_logo1,
+  pending,
+  schl_logo2,
+  schl_logo3,
+  schl_logo4,
+  schl_logo5,
 } = require("@/assets");
 
 const admin_dhb_menu1 = [
@@ -69,6 +76,103 @@ const analytics_info = [
     figure: "789",
     percentage: "-5.4",
   },
+  {
+    title: "Av. Session Time",
+    icon: ic_decrease,
+    figure: "25m",
+    percentage: "-0.7",
+  },
+];
+const school_table = [
+  {
+    logo: schl_logo1,
+    name: "Command Secondary School, Saki",
+    type: "Secondary",
+    grade: "SS3",
+    curriculum: "English",
+    teachers: "3",
+    students: "68",
+    confirmation: approved,
+  },
+  {
+    logo: schl_logo2,
+    name: "Queen’s College, Lagos",
+    type: "Secondary",
+    grade: "SS3",
+    curriculum: "Mathematics",
+    teachers: "3",
+    students: "73",
+    confirmation: pending,
+  },
+  {
+    logo: schl_logo3,
+    name: "CMS Grammar School",
+    type: "Secondary",
+    grade: "SS3",
+    curriculum: "English",
+    teachers: "3",
+    students: "54",
+    confirmation: approved,
+  },
+];
+const school_table2 = [
+  {
+    logo: schl_logo1,
+    name: "Command Secondary School, Saki",
+    type: "Secondary",
+    grade: "SS3",
+    curriculum: "English",
+    teachers: "3",
+    students: "68",
+    confirmation: approved,
+  },
+  {
+    logo: schl_logo2,
+    name: "Queen’s College, Lagos",
+    type: "Secondary",
+    grade: "SS3",
+    curriculum: "Mathematics",
+    teachers: "3",
+    students: "73",
+    confirmation: approved,
+  },
+  {
+    logo: schl_logo4,
+    name: "Caleb British International School",
+    type: "Secondary",
+    grade: "SS3",
+    curriculum: "Mathematics",
+    teachers: "1",
+    students: "-",
+    confirmation: pending,
+  },
+  {
+    logo: schl_logo5,
+    name: "Mayflower School, Ikenne",
+    type: "Secondary",
+    grade: "SS3",
+    curriculum: "English",
+    teachers: "-",
+    students: "22",
+    confirmation: approved,
+  },
+  {
+    logo: schl_logo3,
+    name: "CMS Grammar School",
+    type: "Secondary",
+    grade: "SS3",
+    curriculum: "English",
+    teachers: "3",
+    students: "54",
+    confirmation: pending,
+  },
 ];
 
-export { admin_dhb_menu1, admin_dhb_menu2, admin_dhb_menu3, analytics_info };
+export {
+  admin_dhb_menu1,
+  admin_dhb_menu2,
+  admin_dhb_menu3,
+  analytics_info,
+  school_table,
+  school_table2,
+};

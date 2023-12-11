@@ -11,10 +11,25 @@ import eye from "./eye.png";
 import ic_notification from "./notification.svg";
 import avatar from "./avatar.svg";
 import ic_arrow_down from "./ic_arrow_down.svg";
+import ic_search from "./ic_search.svg";
 import ic_increase from "./ic_increase.png";
 import ic_decrease from "./ic_decrease.png";
+import schl_logo1 from "./schl_logo1.png";
+import approved from "./approved.png";
+import pending from "./pending.png";
+import schl_logo2 from "./schl_logo2.png";
+import schl_logo3 from "./schl_logo3.png";
+import schl_logo4 from "./schl_logo4.png";
+import schl_logo5 from "./schl_logo5.png";
+import ic_menu from "./ic_menu.svg";
+import filter from "./filter.svg";
+import ic_plus from "./ic_plus.svg";
+import ic_grades from "./ic_grades.svg";
 
 export {
+  ic_plus,
+  ic_grades,
+  filter,
   logo,
   eye,
   logo_w,
@@ -30,4 +45,13 @@ export {
   ic_arrow_down,
   ic_increase,
   ic_decrease,
+  ic_search,
+  approved,
+  pending,
+  schl_logo1,
+  schl_logo3,
+  schl_logo2,
+  schl_logo4,
+  schl_logo5,
+  ic_menu,
 };

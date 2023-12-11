@@ -50,8 +50,8 @@ export default function Page({ params }) {
   }
 
   return (
-    <div className="inline-flex items-start bg-white w-full h-full">
-      <div className="flex w-[273px] h-[100vh] flex-row justify-center items-start bg-neutral-80">
+    <div className="inline-flex items-start  w-full h-full bg-neutral-80 ">
+      <div className="flex w-[273px] flex-row justify-center items-start bg-neutral-80">
         <div className="flex flex-col items-start gap-4">
           <div className="flex w-[273px] flex-col items-start gap-2.5 px-9 py-8">
             <div className="flex items-start gap-2">
@@ -73,7 +73,7 @@ export default function Page({ params }) {
           <div className="flex flex-col items-start gap-2">{menu3}</div>
         </div>
       </div>
-      <div className="flex w-full h-[100vh] flex-row justify-center items-start">
+      <div className="flex w-full h-[100%] flex-row justify-center items-start pb-10 bg-white overflow-hidden">
         {menu}
       </div>
     </div>
