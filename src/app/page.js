@@ -18,11 +18,6 @@ export default function Home() {
         </div>
         <div className="self-stretch flex flex-col items-center justify-start gap-[24px] text-sm text-neutral-40 font-inter">
           <div className="rounded-3xl bg-neutral-5 flex flex-row items-center justify-center p-3 gap-[4px] text-center text-neutral-80 border-[1px] border-solid border-neutral-10">
-            <img
-              className="relative w-1.5 h-1.5 hidden"
-              alt=""
-              src="/dot-filled.svg"
-            />
             <div className="relative leading-[12px] font-medium">
               adedejiadeniji@gmail.com
             </div>

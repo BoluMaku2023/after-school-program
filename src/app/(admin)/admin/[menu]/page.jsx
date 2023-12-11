@@ -9,21 +9,35 @@ import { dashboard_icon, logo_w } from "@/assets";
 import Image from "next/image";
 import Dashboard from "./Dashboard";
 import School from "./School";
+import Assessment from "./Asessment";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import Link from "next/link";
+
 const Menu = ({ menu }) => {
+  const pathname = usePathname();
+
+  const pathh = "" + menu.title;
+
   return (
-    <div className="flex w-[273px] flex-col items-start gap-2.5 px-6 py-0">
-      <div
-        tabIndex="1"
-        className="flex cursor-pointer flex-col items-start gap-2.5 self-stretch pl-3 pr-0 py-3 rounded-lg dash-menu-item"
-      >
-        <div className="flex items-center gap-3 self-stretch">
-          <Image src={menu.icon} className="iconn" />
-          <p className="flex-[1_0_0] text-[color:var(--neutral-10,#DAD9DE)] font-inter not-italic font-medium leading-[18px] tracking-[-0.14px]">
-            {menu.title}
-          </p>
+    <Link href={menu.link}>
+      <div className="flex w-[273px] flex-col items-start gap-2.5 px-6 py-0">
+        <div
+          className={
+            pathname.includes(pathh.toLowerCase())
+              ? "dash-menu-item-active"
+              : "dash-menu-item"
+          }
+        >
+          <div className="flex items-center gap-3 self-stretch">
+            <Image src={menu.icon} className="iconn" />
+            <p className="flex-[1_0_0] text-[color:var(--neutral-10,#DAD9DE)] font-inter not-italic font-medium leading-[18px] tracking-[-0.14px]">
+              {menu.title}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 const menu1 = admin_dhb_menu1.map((menu, index) => {
@@ -43,7 +57,7 @@ export default function Page({ params }) {
       menu = <School />;
       break;
     case "assessment":
-      // code block
+      menu = <Assessment />;
       break;
     default:
       menu = <Dashboard />;

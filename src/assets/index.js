@@ -25,8 +25,10 @@ import ic_menu from "./ic_menu.svg";
 import filter from "./filter.svg";
 import ic_plus from "./ic_plus.svg";
 import ic_grades from "./ic_grades.svg";
+import arrow_back_boxed from "./arrow_back_boxed.svg";
 
 export {
+  arrow_back_boxed,
   ic_plus,
   ic_grades,
   filter,

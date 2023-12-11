@@ -21,34 +21,42 @@ const admin_dhb_menu1 = [
   {
     title: "Dashboard",
     icon: dashboard_icon,
+    active_icon: dashboard_icon,
+    link: "/admin/dashboard",
   },
   {
-    title: "Schools",
+    title: "School",
     icon: schl_icon,
+    link: "/admin/school",
   },
   {
-    title: "Assessments",
+    title: "Assessment",
     icon: assessment_icon,
+    link: "/admin/assessment",
   },
 ];
 const admin_dhb_menu2 = [
   {
     title: "Profile",
     icon: profile_icon,
+    link: "/admin/dashboard",
   },
   {
     title: "Inbox",
     icon: ic_inbox,
+    link: "/admin/dashboard",
   },
 ];
 const admin_dhb_menu3 = [
   {
     title: "Support",
     icon: ic_support,
+    link: "/admin/dashboard",
   },
   {
     title: "Setttings",
     icon: ic_settings,
+    link: "/admin/dashboard",
   },
 ];
 const analytics_info = [
@@ -165,6 +173,28 @@ const school_table2 = [
     teachers: "3",
     students: "54",
     confirmation: pending,
+  },
+];
+const assessment_list = [
+  {
+    name: "Command Secondary School, Saki",
+    course: ["English Language", "Mathematics"],
+  },
+  {
+    name: "Queen’s College, Lagos",
+    course: ["English Language", "Mathematics"],
+  },
+  {
+    name: "Caleb British International School",
+    course: ["English Language", "Mathematics"],
+  },
+  {
+    course: ["English Language", "Mathematics"],
+    name: "Mayflower School, Ikenne",
+  },
+  {
+    name: "CMS Grammar School",
+    course: ["English Language", "Mathematics"],
   },
 ];
 
