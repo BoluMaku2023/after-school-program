@@ -28,13 +28,35 @@ import ic_grades from "./ic_grades.svg";
 import arrow_back_boxed from "./arrow_back_boxed.svg";
 import calendar from "./calendar.svg";
 import arrow_left from "./arrow_left.svg";
+import ic_settings_active from "./ic_settings_active.svg";
+import ic_support_active from "./ic_support_active.svg";
+import dashboard_icon_active from "./dashboard-icon-active.svg";
 import empty_inbox from "./empty_inbox.svg";
+import ic_img_file from "./ic_img_file.svg";
+import ic_inbox_active from "./ic_inbox_active.svg";
+import ic_profile_active from "./ic_profile_active.svg";
+import ic_assess_active from "./ic_assess_active.svg";
+import ic_schl_active from "./ic_schl_active.svg";
+import ic_role from "./ic_role.svg";
+import email_link from "./email_link.svg";
 import ic_edit_profile from "./ic_edit_profile.png";
 import pending_review from "./pending_review.png";
 import reviewed from "./reviewed.png";
+import pass from "./pass.png";
 
 export {
+  pass,
+  dashboard_icon_active,
+  ic_role,
+  ic_support_active,
+  email_link,
+  ic_schl_active,
+  ic_profile_active,
+  ic_assess_active,
+  ic_inbox_active,
+  ic_settings_active,
   empty_inbox,
+  ic_img_file,
   reviewed,
   ic_edit_profile,
   pending_review,

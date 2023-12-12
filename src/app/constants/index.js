@@ -17,22 +17,31 @@ const {
   schl_logo5,
   pending_review,
   reviewed,
+  dashboard_icon_active,
+  ic_settings_active,
+  ic_support_active,
+  ic_inbox_active,
+  ic_profile_active,
+  ic_assess_active,
+  ic_schl_active,
 } = require("@/assets");
 
 const admin_dhb_menu1 = [
   {
     title: "Dashboard",
     icon: dashboard_icon,
-    active_icon: dashboard_icon,
+    active_icon: dashboard_icon_active,
     link: "/admin/dashboard",
   },
   {
     title: "School",
     icon: schl_icon,
+    active_icon: ic_schl_active,
     link: "/admin/school",
   },
   {
     title: "Assessment",
+    active_icon: ic_assess_active,
     icon: assessment_icon,
     link: "/admin/assessment",
   },
@@ -40,11 +49,13 @@ const admin_dhb_menu1 = [
 const admin_dhb_menu2 = [
   {
     title: "Profile",
+    active_icon: ic_profile_active,
     icon: profile_icon,
     link: "/admin/profile",
   },
   {
     title: "Inbox",
+    active_icon: ic_inbox_active,
     icon: ic_inbox,
     link: "/admin/inbox",
   },
@@ -52,11 +63,13 @@ const admin_dhb_menu2 = [
 const admin_dhb_menu3 = [
   {
     title: "Support",
+    active_icon: ic_support_active,
     icon: ic_support,
     link: "/admin/support",
   },
   {
-    title: "Setttings",
+    title: "Settings",
+    active_icon: ic_settings_active,
     icon: ic_settings,
     link: "/admin/settings",
   },
@@ -330,6 +343,23 @@ const admin_accounts_notification_prefs = [
     checked: true,
   },
 ];
+const admin_notification_prefs = [
+  {
+    title: "Email Notifications",
+    desc: "Allow users get the latest new and updates directly on their mail.",
+    checked: true,
+  },
+  {
+    title: "In-App Notifications",
+    desc: "Allow users get in-app updates and notifications about their activities.",
+    checked: true,
+  },
+  {
+    title: "SMS Notifications",
+    desc: "Allow users get the latest new and updates via SMS.",
+    checked: false,
+  },
+];
 const admin_system_notification_prefs = [
   {
     title: "Enable system notifications",
@@ -350,4 +380,5 @@ export {
   admin_accounts_notification_prefs,
   ticket_list,
   admin_system_notification_prefs,
+  admin_notification_prefs,
 };

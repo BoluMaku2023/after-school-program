@@ -16,6 +16,7 @@ import Link from "next/link";
 import Profile from "./Profile";
 import Inbox from "./Inbox";
 import Support from "./Support";
+import Settings from "./Settings";
 
 const Menu = ({ menu }) => {
   const pathname = usePathname();
@@ -33,7 +34,14 @@ const Menu = ({ menu }) => {
           }
         >
           <div className="flex items-center gap-3 self-stretch">
-            <Image src={menu.icon} className="iconn" />
+            <Image
+              src={
+                pathname.includes(pathh.toLowerCase())
+                  ? menu.active_icon
+                  : menu.icon
+              }
+              className="iconn"
+            />
             <p className="flex-[1_0_0] text-[color:var(--neutral-10,#DAD9DE)] font-inter not-italic font-medium leading-[18px] tracking-[-0.14px]">
               {menu.title}
             </p>
@@ -70,6 +78,9 @@ export default function Page({ params }) {
       break;
     case "support":
       menu = <Support />;
+      break;
+    case "settings":
+      menu = <Settings />;
       break;
     default:
       menu = <Dashboard />;
