@@ -26,8 +26,20 @@ import filter from "./filter.svg";
 import ic_plus from "./ic_plus.svg";
 import ic_grades from "./ic_grades.svg";
 import arrow_back_boxed from "./arrow_back_boxed.svg";
+import calendar from "./calendar.svg";
+import arrow_left from "./arrow_left.svg";
+import empty_inbox from "./empty_inbox.svg";
+import ic_edit_profile from "./ic_edit_profile.png";
+import pending_review from "./pending_review.png";
+import reviewed from "./reviewed.png";
 
 export {
+  empty_inbox,
+  reviewed,
+  ic_edit_profile,
+  pending_review,
+  arrow_left,
+  calendar,
   arrow_back_boxed,
   ic_plus,
   ic_grades,

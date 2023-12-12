@@ -15,6 +15,8 @@ const {
   schl_logo3,
   schl_logo4,
   schl_logo5,
+  pending_review,
+  reviewed,
 } = require("@/assets");
 
 const admin_dhb_menu1 = [
@@ -39,24 +41,24 @@ const admin_dhb_menu2 = [
   {
     title: "Profile",
     icon: profile_icon,
-    link: "/admin/dashboard",
+    link: "/admin/profile",
   },
   {
     title: "Inbox",
     icon: ic_inbox,
-    link: "/admin/dashboard",
+    link: "/admin/inbox",
   },
 ];
 const admin_dhb_menu3 = [
   {
     title: "Support",
     icon: ic_support,
-    link: "/admin/dashboard",
+    link: "/admin/support",
   },
   {
     title: "Setttings",
     icon: ic_settings,
-    link: "/admin/dashboard",
+    link: "/admin/settings",
   },
 ];
 const analytics_info = [
@@ -123,6 +125,71 @@ const school_table = [
     confirmation: approved,
   },
 ];
+const ticket_list = [
+  {
+    ticket_id: "A8901-G7SP",
+    type: "General",
+    assignor: "You",
+    assignee: "Ayodeji Adeniji",
+    date: "06/11/2023",
+    time: "10:37 PM",
+    status: pending_review,
+  },
+  {
+    ticket_id: "A8901-G7SP",
+    type: "Assessments",
+    assignor: "You",
+    assignee: "Ayodeji Adeniji",
+    date: "06/11/2023",
+    time: "10:37 PM",
+    status: pending_review,
+  },
+  {
+    ticket_id: "A8901-G7SP",
+    type: "Login/Registration",
+    assignor: "You",
+    assignee: "Erica Emmanuel",
+    date: "06/11/2023",
+    time: "10:37 PM",
+    status: reviewed,
+  },
+  {
+    ticket_id: "A8901-G7SP",
+    type: "Profile",
+    assignor: "You",
+    assignee: "Folake Ogunleye",
+    date: "06/11/2023",
+    time: "10:37 PM",
+    status: reviewed,
+  },
+  {
+    ticket_id: "A8901-G7SP",
+    type: "Assessments",
+    assignor: "You",
+    assignee: "Ayodeji Adeniji",
+    date: "06/11/2023",
+    time: "10:37 PM",
+    status: pending_review,
+  },
+  {
+    ticket_id: "A8901-G7SP",
+    type: "Login/Registration",
+    assignor: "You",
+    assignee: "Erica Emmanuel",
+    date: "06/11/2023",
+    time: "10:37 PM",
+    status: reviewed,
+  },
+  {
+    ticket_id: "A8901-G7SP",
+    type: "Profile",
+    assignor: "You",
+    assignee: "Folake Ogunleye",
+    date: "06/11/2023",
+    time: "10:37 PM",
+    status: reviewed,
+  },
+];
 const school_table2 = [
   {
     logo: schl_logo1,
@@ -178,23 +245,96 @@ const school_table2 = [
 const assessment_list = [
   {
     name: "Command Secondary School, Saki",
-    course: ["English Language", "Mathematics"],
+    course: [
+      { id: "saki-eng", title: "English Language" },
+      { id: "saki-maths", title: "Mathematics" },
+    ],
   },
   {
     name: "Queen’s College, Lagos",
-    course: ["English Language", "Mathematics"],
+    course: [
+      { id: "queens-eng", title: "English Language" },
+      { id: "queens-maths", title: "Mathematics" },
+    ],
   },
   {
     name: "Caleb British International School",
-    course: ["English Language", "Mathematics"],
+    course: [
+      { id: "caleb-eng", title: "English Language" },
+      { id: "caleb-maths", title: "Mathematics" },
+    ],
   },
   {
-    course: ["English Language", "Mathematics"],
+    course: [
+      { id: "mayflower-eng", title: "English Language" },
+      { id: "mayflower-maths", title: "Mathematics" },
+    ],
     name: "Mayflower School, Ikenne",
   },
   {
     name: "CMS Grammar School",
-    course: ["English Language", "Mathematics"],
+    course: [
+      { id: "cms-eng", title: "English Language" },
+      { id: "cms-maths", title: "Mathematics" },
+    ],
+  },
+];
+const unit_list = [
+  {
+    name: "Part of Speech",
+    questions: "60",
+    points: "30",
+    teacher: "Bosun",
+    duration: "30",
+    date: "18/12/23",
+    time: "6:00 PM",
+  },
+  {
+    name: "Vocabulary Development",
+    questions: "60",
+    points: "60",
+    teacher: "Odun",
+    duration: "40",
+    date: "18/12/23",
+    time: "2:00 PM",
+  },
+  {
+    name: "Active and Passive Voice",
+    questions: "60",
+    points: "60",
+    teacher: "Odun",
+    duration: "40",
+    date: "18/12/23",
+    time: "2:00 PM",
+  },
+];
+const admin_accounts_notification_prefs = [
+  {
+    title: "Allow account activity notifications",
+    desc: "Enable users receive push notifications about their account including password reset, account deletion/deactivations, specifications etc.",
+    checked: true,
+  },
+  {
+    title: "Opt-out and Unsubscribe options",
+    desc: "Allow users unsubscribe for promotional newsletters on their email or mobile numbers.",
+    checked: true,
+  },
+  {
+    title: "General notifications",
+    desc: "Allow notifications sent to users’ emails, displayed on the platform, sent to users’ mobile phones.",
+    checked: true,
+  },
+  {
+    title: "Promotional notifications",
+    desc: "Allow users receive promotional notifications such as marketing/promotion messages from the platform.",
+    checked: true,
+  },
+];
+const admin_system_notification_prefs = [
+  {
+    title: "Enable system notifications",
+    desc: "Critical updates, system maintenance notices, or platform-wide announcements",
+    checked: true,
   },
 ];
 
@@ -205,4 +345,9 @@ export {
   analytics_info,
   school_table,
   school_table2,
+  assessment_list,
+  unit_list,
+  admin_accounts_notification_prefs,
+  ticket_list,
+  admin_system_notification_prefs,
 };

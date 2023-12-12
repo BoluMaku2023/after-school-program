@@ -13,6 +13,9 @@ import Assessment from "./Asessment";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
+import Profile from "./Profile";
+import Inbox from "./Inbox";
+import Support from "./Support";
 
 const Menu = ({ menu }) => {
   const pathname = usePathname();
@@ -56,8 +59,17 @@ export default function Page({ params }) {
     case "school":
       menu = <School />;
       break;
+    case "profile":
+      menu = <Profile />;
+      break;
     case "assessment":
       menu = <Assessment />;
+      break;
+    case "inbox":
+      menu = <Inbox />;
+      break;
+    case "support":
+      menu = <Support />;
       break;
     default:
       menu = <Dashboard />;
