@@ -27,7 +27,7 @@ const Dashboard = () => {
             <div className="flex items-center gap-1 self-stretch">
               <Image src={info.icon} />
               <span className="text-[color:var(--success-90,#05603A)] text-sm not-italic font-medium leading-[18px] tracking-[-0.14px]">
-                {info.percentage}
+                {info.percentage}%
               </span>
             </div>
           </div>

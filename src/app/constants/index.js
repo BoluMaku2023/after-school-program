@@ -74,6 +74,104 @@ const admin_dhb_menu3 = [
     link: "/admin/settings",
   },
 ];
+const teacher_dhb_menu1 = [
+  {
+    title: "Dashboard",
+    icon: dashboard_icon,
+    active_icon: dashboard_icon_active,
+    link: "/teacher/dashboard",
+  },
+  {
+    title: "Course",
+    icon: schl_icon,
+    active_icon: ic_schl_active,
+    link: "/teacher/course",
+  },
+  {
+    title: "Assessment",
+    active_icon: ic_assess_active,
+    icon: assessment_icon,
+    link: "/teacher/assessment",
+  },
+];
+const teacher_student_profile = [
+  {
+    name: "Jennifer Okafor",
+    icon: "https://res.cloudinary.com/djogev23i/image/upload/v1702444058/Avatar_a2xp74.png",
+  },
+  {
+    name: "Aisha Ibrahim",
+    icon: "https://res.cloudinary.com/djogev23i/image/upload/v1702444553/Avatar_xyjyjo.png",
+  },
+  {
+    name: "Zainab Mohammed",
+    icon: "https://res.cloudinary.com/djogev23i/image/upload/v1702459130/Avatar-4_qhalpv.png",
+  },
+  {
+    name: "Adesola Afolabi",
+    icon: "https://res.cloudinary.com/djogev23i/image/upload/v1702459130/Avatar-3_jbqn1g.png",
+  },
+  {
+    name: "Obinna Ezeani",
+    icon: "https://res.cloudinary.com/djogev23i/image/upload/v1702459130/Avatar-1_h9nmbs.png",
+  },
+  {
+    name: "Zainab Mohammed",
+    icon: "https://res.cloudinary.com/djogev23i/image/upload/v1702459130/Avatar-5_upqtxr.png",
+  },
+  {
+    name: "Yusuf Aliyu",
+    icon: "https://res.cloudinary.com/djogev23i/image/upload/v1702459130/Avatar-2_xtxqnl.png",
+  },
+  {
+    name: "Ngozi Onyekachi",
+    icon: "https://res.cloudinary.com/djogev23i/image/upload/v1702459130/Avatar-6_lrgywv.png",
+  },
+  {
+    name: "Ifeoma Okonkwo",
+    icon: "https://res.cloudinary.com/djogev23i/image/upload/v1702459130/Avatar_3_rqodvn.png",
+  },
+  {
+    name: "Ngozi Onyekachi",
+    icon: "https://res.cloudinary.com/djogev23i/image/upload/v1702459130/Avatar-6_lrgywv.png",
+  },
+  {
+    name: "Ifeoma Okonkwo",
+    icon: "https://res.cloudinary.com/djogev23i/image/upload/v1702459130/Avatar_3_rqodvn.png",
+  },
+  {
+    name: "Ayodeji Adeniji",
+    icon: "https://res.cloudinary.com/djogev23i/image/upload/v1702459130/Avatar_2_hohqgu.png",
+  },
+];
+const teacher_dhb_menu2 = [
+  {
+    title: "Profile",
+    active_icon: ic_profile_active,
+    icon: profile_icon,
+    link: "/teacher/profile",
+  },
+  {
+    title: "Inbox",
+    active_icon: ic_inbox_active,
+    icon: ic_inbox,
+    link: "/teacher/inbox",
+  },
+];
+const teacher_dhb_menu3 = [
+  {
+    title: "Support",
+    active_icon: ic_support_active,
+    icon: ic_support,
+    link: "/teacher/support",
+  },
+  {
+    title: "Settings",
+    active_icon: ic_settings_active,
+    icon: ic_settings,
+    link: "/teacher/settings",
+  },
+];
 const analytics_info = [
   {
     title: "Total users",
@@ -104,6 +202,26 @@ const analytics_info = [
     icon: ic_decrease,
     figure: "25m",
     percentage: "-0.7",
+  },
+];
+const teacher_analytics_info = [
+  {
+    title: "Course",
+    icon: ic_increase,
+    figure: "01",
+    percentage: "+1.0",
+  },
+  {
+    title: "School",
+    icon: ic_increase,
+    figure: "01",
+    percentage: "+1.0",
+  },
+  {
+    title: "Students",
+    icon: ic_increase,
+    figure: "86",
+    percentage: "+0.0",
   },
 ];
 const school_table = [
@@ -372,6 +490,10 @@ export {
   admin_dhb_menu1,
   admin_dhb_menu2,
   admin_dhb_menu3,
+  teacher_dhb_menu1,
+  teacher_dhb_menu2,
+  teacher_dhb_menu3,
+  teacher_analytics_info,
   analytics_info,
   school_table,
   school_table2,
@@ -380,5 +502,6 @@ export {
   admin_accounts_notification_prefs,
   ticket_list,
   admin_system_notification_prefs,
+  teacher_student_profile,
   admin_notification_prefs,
 };

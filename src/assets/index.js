@@ -21,6 +21,7 @@ import schl_logo2 from "./schl_logo2.png";
 import schl_logo3 from "./schl_logo3.png";
 import schl_logo4 from "./schl_logo4.png";
 import schl_logo5 from "./schl_logo5.png";
+import english_card from "./english_card.png";
 import ic_menu from "./ic_menu.svg";
 import filter from "./filter.svg";
 import ic_plus from "./ic_plus.svg";
@@ -42,6 +43,8 @@ import email_link from "./email_link.svg";
 import google from "./google.svg";
 import ic_at from "./ic_at.svg";
 import ic_phone from "./ic_phone.svg";
+import ic_drag from "./ic_drag.svg";
+import plus from "./plus.svg";
 import ic_edit_profile from "./ic_edit_profile.png";
 import pending_review from "./pending_review.png";
 import reviewed from "./reviewed.png";
@@ -49,9 +52,12 @@ import pass from "./pass.png";
 
 export {
   ic_phone,
+  plus,
+  english_card,
   google,
   ic_at,
   pass,
+  ic_drag,
   dashboard_icon_active,
   ic_role,
   ic_support_active,
