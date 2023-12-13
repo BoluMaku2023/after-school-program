@@ -39,12 +39,18 @@ import ic_assess_active from "./ic_assess_active.svg";
 import ic_schl_active from "./ic_schl_active.svg";
 import ic_role from "./ic_role.svg";
 import email_link from "./email_link.svg";
+import google from "./google.svg";
+import ic_at from "./ic_at.svg";
+import ic_phone from "./ic_phone.svg";
 import ic_edit_profile from "./ic_edit_profile.png";
 import pending_review from "./pending_review.png";
 import reviewed from "./reviewed.png";
 import pass from "./pass.png";
 
 export {
+  ic_phone,
+  google,
+  ic_at,
   pass,
   dashboard_icon_active,
   ic_role,

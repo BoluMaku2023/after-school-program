@@ -16,12 +16,15 @@ import {
   calendar,
   email_link,
   filter,
+  google,
   ic_arrow_down,
+  ic_at,
   ic_edit_profile,
   ic_grades,
   ic_increase,
   ic_menu,
   ic_notification,
+  ic_phone,
   ic_plus,
   ic_role,
   ic_search,
@@ -30,7 +33,7 @@ import {
   schl_logo1,
 } from "@/assets";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Contacts = ({ tabb2 }) => {
   return (
@@ -83,7 +86,7 @@ const Contacts = ({ tabb2 }) => {
     </div>
   );
 };
-const Accounts = ({ tabb2 }) => {
+const Accounts = () => {
   return (
     <div
       id="course_details"
@@ -108,7 +111,7 @@ const Accounts = ({ tabb2 }) => {
     </div>
   );
 };
-const TimeDate = ({ tabb2 }) => {
+const TimeDate = () => {
   return (
     <div
       id="course_details"
@@ -204,7 +207,69 @@ const TimeDate = ({ tabb2 }) => {
     </div>
   );
 };
-const Language = ({ tabb2 }) => {
+const Session = () => {
+  return (
+    <div
+      id="course_details"
+      className="inline-flex flex-col items-start gap-[22px] w-[70%]"
+    >
+      <div className="flex items-start w-full justify-between border-b-[color:var(--neutral-10,#DAD9DE)] pl-8 pr-[51px] pt-8 pb-6 border-b border-solid">
+        <div className="flex flex-col items-start gap-4">
+          <h3 className="text-[color:var(--neutral-40,#6C667A)] text-base not-italic font-medium leading-6 tracking-[-0.16px]">
+            Security
+          </h3>
+          <h3 className="text-[color:var(--neutral-80,#1C1A24)] text-[24px] not-italic font-semibold leading-8">
+            Session Management
+          </h3>
+        </div>
+        <button className="flex bg-[#1C1A24] justify-center items-center gap-1 pl-3.5 pr-[15px] py-[11px] rounded-lg">
+          <Image src={ic_plus} />
+          <span className="text-[color:var(--grey-on-black-white,#FFF)] text-center text-sm not-italic font-normal leading-[14px]">
+            Add custom field
+          </span>
+        </button>
+      </div>
+      <div className="flex flex-col gap-10 px-8">
+        <div className="flex flex-col items-start gap-4 ">
+          <h3 className="text-[color:var(--neutral-80,#1C1A24)] text-xl not-italic font-semibold leading-6 tracking-[-0.2px]">
+            Timeouts
+          </h3>
+          <div className="flex w-[350px] justify-between items-center gap-2">
+            <p className=" text-[color:var(--neutral-50,#474059)] text-sm not-italic font-medium leading-5 tracking-[-0.14px]">
+              Set time intervals between sessions
+            </p>
+            <div className="flex w-[80px]  justify-between pb-2 border-b-2 border-b-[color:var(--grey-on-white-10,#E5E5E5)]">
+              <p className="px-1 outline-none placeholder:text-[color:var(--grey-on-white-40,#999)] text-sm not-italic font-medium tracking-[-0.14px]">
+                5 mins
+              </p>
+              <Image src={ic_arrow_down} alt="Search icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col gap-6 items-start w-full justify-between border-t-[color:var(--neutral-10,#DAD9DE)] pl-8 pr-[51px] pt-8 pb-6 border-t border-solid">
+        <div className="flex flex-col items-start gap-4">
+          <h3 className="text-[color:var(--neutral-80,#1C1A24)] text-xl not-italic font-semibold leading-6 tracking-[-0.2px]">
+            Concurrent sessions
+          </h3>
+        </div>
+        <div className="flex w-[70%] flex-row justify-between items-center">
+          <h3 className="text-[color:var(--neutral-40,#6C667A)] text-base not-italic font-medium leading-6 tracking-[-0.16px]">
+            Allow login sessions on multiple devices at once
+          </h3>
+          <div className="">
+            <label class="toggle">
+              <input class="toggle-input" type="checkbox" />
+              <span class="toggle-label" data-off="" data-on=""></span>
+              <span class="toggle-handle"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+const Language = () => {
   return (
     <div
       id="course_details"
@@ -242,7 +307,7 @@ const Language = ({ tabb2 }) => {
     </div>
   );
 };
-const Roles = ({ tabb2 }) => {
+const Roles = () => {
   const role_list = [
     {
       title: "Administrator",
@@ -584,7 +649,7 @@ const Password = () => {
           <p className=" text-[color:var(--neutral-50,#474059)] text-sm not-italic font-medium leading-5 tracking-[-0.14px]">
             Minimum Lowercase character
           </p>
-          <div className="flex w-[50px] justify-between justify-between pb-2 border-b-2 border-b-[color:var(--grey-on-white-10,#E5E5E5)]">
+          <div className="flex w-[50px] justify-between pb-2 border-b-2 border-b-[color:var(--grey-on-white-10,#E5E5E5)]">
             <p className="px-1 outline-none  placeholder:text-[color:var(--grey-on-white-40,#999)] text-sm not-italic font-medium tracking-[-0.14px]">
               1
             </p>
@@ -738,52 +803,211 @@ const Others = () => {
     </div>
   );
 };
+const Authentication = () => {
+  return (
+    <div
+      id="prf_details"
+      className="inline-flex flex-col items-start gap-[22px] w-[70%]"
+    >
+      <div className="flex items-start w-full justify-between border-b-[color:var(--neutral-10,#DAD9DE)] pl-8 pr-[51px] pt-8 pb-6 border-b border-solid">
+        <div className="flex flex-col items-start gap-4">
+          <h3 className="text-[color:var(--neutral-40,#6C667A)] text-base not-italic font-medium leading-6 tracking-[-0.16px]">
+            Security
+          </h3>
+          <h3 className="text-[color:var(--neutral-80,#1C1A24)] text-[24px] not-italic font-semibold leading-8">
+            Authentication
+          </h3>
+        </div>
+        <button className="flex bg-[#1C1A24] justify-center items-center gap-1 pl-3.5 pr-[15px] py-[11px] rounded-lg">
+          <Image src={ic_plus} />
+          <span className="text-[color:var(--grey-on-black-white,#FFF)] text-center text-sm not-italic font-normal leading-[14px]">
+            Add custom field
+          </span>
+        </button>
+      </div>
+      <div className="flex w-full flex-col items-start gap-8 pl-8 pr-[10%] pt-4 pb-0">
+        <h3 className="text-[color:var(--neutral-80,#1C1A24)] text-xl not-italic font-semibold leading-6 tracking-[-0.2px]">
+          Login
+        </h3>
+        <p className="flex-[1_0_0] text-[#8F8F8F] text-sm not-italic font-medium leading-[18px] tracking-[-0.14px]">
+          Users can gain access into their new or existing accounts by using one
+          of the listed authentication methods.
+        </p>
+        <div className="flex w-full h-full flex-row items-start gap-5 justify-between self-stretch">
+          <Image src={ic_at} alt="icon email" />
+          <div className="flex flex-col items-start gap-4 flex-[1_0_0]">
+            <h3 className="self-stretch text-[color:var(--neutral-80,#1C1A24)] text-base not-italic font-semibold leading-6 tracking-[-0.16px]">
+              Email & Password
+            </h3>
+            <p className="self-stretch text-[color:var(--neutral-40,#6C667A)] text-base not-italic font-medium leading-6 tracking-[-0.16px]">
+              Users are prompted to input their email address and password on
+              log in to verify their identity.
+            </p>
+          </div>
+          <div className="flex flex-col h-full gap-5 self-stretch justify-between items-center">
+            <Image
+              src={ic_arrow_down}
+              alt="Arrow down"
+              className="rotate-180"
+            />
+            <label class="toggle">
+              <input class="toggle-input" type="checkbox" />
+              <span class="toggle-label" data-off="" data-on=""></span>
+              <span class="toggle-handle"></span>
+            </label>
+          </div>
+        </div>
+        <div className="flex w-full h-full flex-row items-start gap-5 justify-between self-stretch">
+          <Image src={ic_phone} alt="icon email" />
+          <div className="flex flex-col items-start gap-4 flex-[1_0_0]">
+            <h3 className="self-stretch text-[color:var(--neutral-80,#1C1A24)] text-base not-italic font-semibold leading-6 tracking-[-0.16px]">
+              Phone number & Password
+            </h3>
+            <p className="self-stretch text-[color:var(--neutral-40,#6C667A)] text-base not-italic font-medium leading-6 tracking-[-0.16px]">
+              Users are prompted to input their phone number and password on log
+              in to verify their identity.
+            </p>
+          </div>
+          <div className="flex flex-col h-full gap-5 self-stretch justify-between items-center">
+            <Image
+              src={ic_arrow_down}
+              alt="Arrow down"
+              className="rotate-180"
+            />
+            <label class="toggle">
+              <input class="toggle-input" type="checkbox" />
+              <span class="toggle-label" data-off="" data-on=""></span>
+              <span class="toggle-handle"></span>
+            </label>
+          </div>
+        </div>
+        <div className="flex w-full h-full flex-row items-start gap-5 justify-between self-stretch">
+          <Image src={google} alt="icon email" />
+          <div className="flex flex-col items-start gap-4 flex-[1_0_0]">
+            <h3 className="self-stretch text-[color:var(--neutral-80,#1C1A24)] text-base not-italic font-semibold leading-6 tracking-[-0.16px]">
+              Google SSO Login
+            </h3>
+            <p className="self-stretch text-[color:var(--neutral-40,#6C667A)] text-base not-italic font-medium leading-6 tracking-[-0.16px]">
+              Use Google account to verify user identity anf log in details
+            </p>
+          </div>
+          <div className="flex flex-col h-full gap-5 self-stretch justify-between items-center">
+            <Image
+              src={ic_arrow_down}
+              alt="Arrow down"
+              className="rotate-180"
+            />
+            <label class="toggle">
+              <input class="toggle-input" type="checkbox" />
+              <span class="toggle-label" data-off="" data-on=""></span>
+              <span class="toggle-handle"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+const MenuItem = ({ settings, getFromChild, selectedTab }) => {
+  //console.log(index);
+  const logit = async () => {
+    getFromChild(settings.title);
+  };
+  return (
+    <div
+      className={
+        selectedTab == settings.title ? "course-item-active" : "course-item"
+      }
+      onClick={logit}
+    >
+      <span className="w-[140px] text-xs not-italic font-medium leading-4 tracking-[-0.12px]">
+        {settings.title}
+      </span>
+    </div>
+  );
+};
 
 const Settings = () => {
-  const [selectedTab, setSelectedTab] = useState(8);
-  const tabb0 = () => {
-    setSelectedTab(0);
-  };
-  const tabb1 = () => {
-    setSelectedTab(1);
-  };
-  const tabb2 = () => {
-    setSelectedTab(2);
-  };
-  const tabb_back = () => {
-    setSelectedTab(0);
-  };
+  const [selectedTab, setSelectedTab] = useState("Contacts");
 
   let tab = {};
   switch (selectedTab) {
-    case 0:
-      tab = <Contacts tabb2={tabb2} />;
+    case "Contacts":
+      tab = <Contacts />;
+      //setSelectedTab("Contacts");
       break;
-    case 1:
+    case "Time & Date":
       tab = <TimeDate />;
+      //setSelectedTab("Time & Date");
       break;
-    case 2:
-      tab = <Notification tabb2={tabb0} />;
+    case "Notifications":
+      tab = <Notification />;
       break;
-    case 3:
-      tab = <Language tabb2={tabb0} />;
+    case "Language":
+      tab = <Language />;
       break;
-    case 4:
-      tab = <Accounts tabb2={tabb0} />;
+    case "Accounts":
+      tab = <Accounts />;
       break;
-    case 5:
-      tab = <Roles tabb2={tabb0} />;
+    case "Roles & Permissions":
+      tab = <Roles />;
       break;
-    case 6:
-      tab = <Grading tabb2={tabb0} />;
+    case "Grading":
+      tab = <Grading />;
       break;
-    case 8:
-      tab = <Password tabb2={tabb0} />;
+    case "Password":
+      tab = <Password />;
       break;
-    case 7:
-      tab = <Others tabb2={tabb0} />;
+    case "Others":
+      tab = <Others />;
+      break;
+    case "Authentication":
+      tab = <Authentication />;
+      break;
+    case "Session Management":
+      tab = <Session />;
       break;
   }
+  // const tab_timedate = ({ title }) => {
+  //   switch (title) {
+  //     case "Contacts":
+  //       //tab = <Contacts />;
+  //       setSelectedTab("Contacts");
+  //       break;
+  //     case "Time & Date":
+  //       //tab = <TimeDate />;
+  //       setSelectedTab("Time & Date");
+  //       break;
+  //     case 2:
+  //       tab = <Notification />;
+  //       break;
+  //     case 3:
+  //       tab = <Language />;
+  //       break;
+  //     case 4:
+  //       tab = <Accounts />;
+  //       break;
+  //     case 5:
+  //       tab = <Roles />;
+  //       break;
+  //     case 6:
+  //       tab = <Grading />;
+  //       break;
+  //     case 8:
+  //       tab = <Password />;
+  //       break;
+  //     case 7:
+  //       tab = <Others />;
+  //       break;
+  //     case 9:
+  //       tab = <Authentication />;
+  //       break;
+  //     case 10:
+  //       tab = <Session />;
+  //       break;
+  //   }
+  // };
+
   const settings_general = [
     { title: "Contacts" },
     { title: "Time & Date" },
@@ -802,6 +1026,20 @@ const Settings = () => {
     { title: "Authentication" },
     { title: "Session Management" },
   ];
+
+  async function getFromChild(index) {
+    setSelectedTab(index);
+  }
+  const general = settings_general.map((settings, index) => {
+    return (
+      <MenuItem
+        key={index}
+        settings={settings}
+        getFromChild={getFromChild}
+        selectedTab={selectedTab}
+      />
+    );
+  });
   return (
     <div className="flex w-[80vw] min-h-[100vh] overflow-hidden flex-col bg-white">
       <div
@@ -860,22 +1098,7 @@ const Settings = () => {
               </h3>
               <div className="w-full h-px bg-[#F6F5F6]"></div>
               <div className="flex flex-col items-start self-stretch border border-[color:var(--neutral-10,#DAD9DE)] rounded-[8px] border-solid overflow-hidden">
-                {settings_general.map((settings, index) => {
-                  return (
-                    <div
-                      onClick={tabb0}
-                      className={
-                        selectedTab == index
-                          ? "course-item-active"
-                          : "course-item"
-                      }
-                    >
-                      <span className="w-[140px] text-xs not-italic font-medium leading-4 tracking-[-0.12px]">
-                        {settings.title}
-                      </span>
-                    </div>
-                  );
-                })}
+                {general}
               </div>
             </div>
             <div className="flex flex-col items-start gap-2 self-stretch">
@@ -886,18 +1109,12 @@ const Settings = () => {
               <div className="flex flex-col items-start self-stretch border border-[color:var(--neutral-10,#DAD9DE)] rounded-[8px] border-solid overflow-hidden">
                 {settings_schl_ppl.map((settings, index) => {
                   return (
-                    <div
-                      onClick={tabb0}
-                      className={
-                        selectedTab == index
-                          ? "course-item-active"
-                          : "course-item"
-                      }
-                    >
-                      <span className="w-[140px] text-xs not-italic font-medium leading-4 tracking-[-0.12px]">
-                        {settings.title}
-                      </span>
-                    </div>
+                    <MenuItem
+                      key={index}
+                      settings={settings}
+                      getFromChild={getFromChild}
+                      selectedTab={selectedTab}
+                    />
                   );
                 })}
               </div>
@@ -910,18 +1127,12 @@ const Settings = () => {
               <div className="flex flex-col items-start self-stretch border border-[color:var(--neutral-10,#DAD9DE)] rounded-[8px] border-solid overflow-hidden">
                 {settings_security.map((settings, index) => {
                   return (
-                    <div
-                      onClick={tabb0}
-                      className={
-                        selectedTab == index
-                          ? "course-item-active"
-                          : "course-item"
-                      }
-                    >
-                      <span className="w-[140px] text-xs not-italic font-medium leading-4 tracking-[-0.12px]">
-                        {settings.title}
-                      </span>
-                    </div>
+                    <MenuItem
+                      key={index}
+                      settings={settings}
+                      getFromChild={getFromChild}
+                      selectedTab={selectedTab}
+                    />
                   );
                 })}
               </div>
