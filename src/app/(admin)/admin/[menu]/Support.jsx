@@ -97,14 +97,14 @@ const Support = () => {
                 />
               </div>
               <button className=" hover:bg-gray-50 flex cursor-pointer items-center gap-2 border border-[color:var(--neutral-10,#DAD9DE)] p-2 rounded-lg border-solid">
-                <Image src={filter} />
+                <Image src={filter} alt="" />
                 <h4 className="text-[color:var(--neutral-80,#1C1A24)] text-center text-sm not-italic font-normal leading-[14px]">
                   Filter
                 </h4>
               </button>
             </div>
             <button className="flex bg-[#1C1A24] justify-center items-center gap-1 pl-3.5 pr-[15px] py-[11px] rounded-lg">
-              <Image src={ic_plus} />
+              <Image src={ic_plus} alt="" />
               <span className="text-[color:var(--grey-on-black-white,#FFF)] text-center text-sm not-italic font-normal leading-[14px]">
                 New support ticket
               </span>
@@ -119,7 +119,7 @@ const Support = () => {
                 <h4 className="text-[color:var(--neutral-80,#1C1A24)] text-center text-sm not-italic font-normal leading-[14px]">
                   All tickets
                 </h4>
-                <Image src={ic_arrow_down} />
+                <Image src={ic_arrow_down} alt="" />
               </button>
             </div>
             <div className="flex items-start self-stretch px-8 py-0">
@@ -222,7 +222,7 @@ const Support = () => {
                             {val.time}
                           </td>
                           <td class="px-6 py-4">
-                            <Image src={val.status} />
+                            <Image src={val.status} alt="" />
                           </td>
                           <td class="px-6 py-4">
                             <button

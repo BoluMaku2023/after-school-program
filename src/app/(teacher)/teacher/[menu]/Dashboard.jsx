@@ -31,7 +31,7 @@ const Dashboard = () => {
                 {info.figure}
               </h3>
               <div className="flex items-center gap-1 self-stretch">
-                <Image src={info.icon} />
+                <Image src={info.icon} alt="" />
                 <span className="text-[color:var(--success-90,#05603A)] text-sm not-italic font-medium leading-[18px] tracking-[-0.14px]">
                   {info.percentage}%
                 </span>
@@ -91,8 +91,8 @@ const Dashboard = () => {
         className="flex w-full  flex-col items-start gap-2.5 pt-6 pb-4 px-8"
       >
         <div className="flex w-full items-center gap-[30px]">
-          {teacher_analytics_info.map((info) => {
-            return <AnalyticsCard info={info} />;
+          {teacher_analytics_info.map((info, key) => {
+            return <AnalyticsCard key={key} info={info} />;
           })}
         </div>
       </div>

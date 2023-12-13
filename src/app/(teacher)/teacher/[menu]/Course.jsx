@@ -41,7 +41,7 @@ const CourseModule = () => {
           </h3>
         </div>
         <button className="flex bg-[#1C1A24] justify-center items-center gap-1 pl-3.5 pr-[15px] py-[11px] rounded-lg">
-          <Image src={ic_plus} />
+          <Image src={ic_plus} alt="" />
           <span className="text-[color:var(--grey-on-black-white,#FFF)] text-center text-sm not-italic font-normal leading-[14px]">
             New module
           </span>
@@ -127,7 +127,7 @@ const CourseDetails = ({ tabb1 }) => {
           </h3>
         </div>
         <button className="flex bg-[#1C1A24] justify-center items-center gap-1 pl-3.5 pr-[15px] py-[11px] rounded-lg">
-          <Image src={ic_grades} />
+          <Image src={ic_grades} alt="" />
           <span className="text-[color:var(--grey-on-black-white,#FFF)] text-center text-sm not-italic font-normal leading-[14px]">
             Grades
           </span>

@@ -53,7 +53,7 @@ const ProfileDetails = ({ tabb2 }) => {
             onClick={tabb2}
             className="flex bg-[#1C1A24] justify-center items-center gap-1 pl-3.5 pr-[15px] py-[11px] rounded-lg"
           >
-            <Image src={profile_icon} />
+            <Image src={profile_icon} alt="" />
             <span className="text-[color:var(--grey-on-black-white,#FFF)] text-center text-sm not-italic font-normal leading-[14px]">
               Edit profile
             </span>
@@ -131,9 +131,12 @@ const Notification = () => {
         <h3 className="self-stretch text-[color:var(--neutral-80,#1C1A24)] text-base not-italic font-semibold leading-6 tracking-[-0.16px]">
           Accounts
         </h3>
-        {admin_accounts_notification_prefs.map((prefs) => {
+        {admin_accounts_notification_prefs.map((prefs, key) => {
           return (
-            <div className="flex w-full flex-row items-start gap-5 justify-between self-stretch">
+            <div
+              key={key}
+              className="flex w-full flex-row items-start gap-5 justify-between self-stretch"
+            >
               <div className="flex flex-col items-start gap-4 flex-[1_0_0]">
                 <h3 className="w-[485px] text-[color:var(--neutral-70,#2B2635)] text-base not-italic font-medium leading-6 tracking-[-0.16px]">
                   {prefs.title}
@@ -161,9 +164,12 @@ const Notification = () => {
         <h3 className="self-stretch text-[color:var(--neutral-80,#1C1A24)] text-base not-italic font-semibold leading-6 tracking-[-0.16px]">
           System
         </h3>
-        {admin_system_notification_prefs.map((prefs) => {
+        {admin_system_notification_prefs.map((prefs, key) => {
           return (
-            <div className="flex w-full flex-row items-start gap-5 justify-between self-stretch">
+            <div
+              key={key}
+              className="flex w-full flex-row items-start gap-5 justify-between self-stretch"
+            >
               <div className="flex flex-col items-start gap-4 flex-[1_0_0]">
                 <h3 className="w-[485px] text-[color:var(--neutral-70,#2B2635)] text-base not-italic font-medium leading-6 tracking-[-0.16px]">
                   {prefs.title}
@@ -383,6 +389,7 @@ const Profile = () => {
             <Image
               className="flex w-8 h-8 justify-center items-center"
               src={arrow_back_boxed}
+              alt=""
             />
           </div>
           <div className="flex flex-col items-start gap-4 self-stretch pt-6 pb-0 px-6">

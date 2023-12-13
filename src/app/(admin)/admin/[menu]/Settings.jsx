@@ -51,7 +51,7 @@ const Contacts = ({ tabb2 }) => {
           </h3>
         </div>
         <button className="flex bg-[#1C1A24] justify-center items-center gap-1 pl-3.5 pr-[15px] py-[11px] rounded-lg">
-          <Image src={ic_plus} />
+          <Image src={ic_plus} alt="" />
           <span className="text-[color:var(--grey-on-black-white,#FFF)] text-center text-sm not-italic font-normal leading-[14px]">
             Add custom field
           </span>
@@ -102,7 +102,7 @@ const Accounts = () => {
           </h3>
         </div>
         <button className="flex bg-[#1C1A24] justify-center items-center gap-1 pl-3.5 pr-[15px] py-[11px] rounded-lg">
-          <Image src={ic_plus} />
+          <Image src={ic_plus} alt="" />
           <span className="text-[color:var(--grey-on-black-white,#FFF)] text-center text-sm not-italic font-normal leading-[14px]">
             Add custom field
           </span>
@@ -127,7 +127,7 @@ const TimeDate = () => {
           </h3>
         </div>
         <button className="flex bg-[#1C1A24] justify-center items-center gap-1 pl-3.5 pr-[15px] py-[11px] rounded-lg">
-          <Image src={ic_plus} />
+          <Image src={ic_plus} alt="" />
           <span className="text-[color:var(--grey-on-black-white,#FFF)] text-center text-sm not-italic font-normal leading-[14px]">
             Add custom field
           </span>
@@ -223,7 +223,7 @@ const Session = () => {
           </h3>
         </div>
         <button className="flex bg-[#1C1A24] justify-center items-center gap-1 pl-3.5 pr-[15px] py-[11px] rounded-lg">
-          <Image src={ic_plus} />
+          <Image src={ic_plus} alt="" />
           <span className="text-[color:var(--grey-on-black-white,#FFF)] text-center text-sm not-italic font-normal leading-[14px]">
             Add custom field
           </span>
@@ -341,7 +341,7 @@ const Roles = () => {
           </h3>
         </div>
         <button className="flex bg-[#1C1A24] justify-center items-center gap-1 pl-3.5 pr-[15px] py-[11px] rounded-lg">
-          <Image src={ic_plus} />
+          <Image src={ic_plus} alt="" />
           <span className="text-[color:var(--grey-on-black-white,#FFF)] text-center text-sm not-italic font-normal leading-[14px]">
             Add new role
           </span>
@@ -352,9 +352,9 @@ const Roles = () => {
           <h3 className="text-[color:var(--neutral-80,#1C1A24)] text-xl not-italic font-semibold leading-6 tracking-[-0.2px]">
             Roles
           </h3>
-          {role_list.map((role) => {
+          {role_list.map((role, key) => {
             return (
-              <div className="flex flex-col items-start gap-4">
+              <div key={key} className="flex flex-col items-start gap-4">
                 <div className="flex items-start  gap-3 pb-2 self-stretch border-b-2 border-b-[color:var(--grey-on-white-10,#E5E5E5)]">
                   <Image src={ic_role} alt="Arrow down icon" />
                   <p className="px-1 outline-none text-[color:var(--neutral-50,#474059)] text-sm not-italic font-medium leading-[18px] tracking-[-0.14px]">
@@ -389,9 +389,12 @@ const Notification = () => {
         </div>
       </div>
       <div className="flex w-full flex-col items-start gap-8 pl-8 pr-[10%] pt-4 pb-0">
-        {admin_notification_prefs.map((prefs) => {
+        {admin_notification_prefs.map((prefs, key) => {
           return (
-            <div className="flex w-full flex-row items-end gap-5 justify-between self-stretch">
+            <div
+              key={key}
+              className="flex w-full flex-row items-end gap-5 justify-between self-stretch"
+            >
               <div className="flex flex-col items-start gap-4 flex-[1_0_0]">
                 <h3 className="w-[485px] text-[color:var(--neutral-70,#2B2635)] text-base not-italic font-medium leading-6 tracking-[-0.16px]">
                   {prefs.title}
@@ -819,7 +822,7 @@ const Authentication = () => {
           </h3>
         </div>
         <button className="flex bg-[#1C1A24] justify-center items-center gap-1 pl-3.5 pr-[15px] py-[11px] rounded-lg">
-          <Image src={ic_plus} />
+          <Image src={ic_plus} alt="" />
           <span className="text-[color:var(--grey-on-black-white,#FFF)] text-center text-sm not-italic font-normal leading-[14px]">
             Add custom field
           </span>

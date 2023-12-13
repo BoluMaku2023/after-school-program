@@ -33,9 +33,9 @@ const CourseCard = ({ list }) => {
         </h3>
         <div className="w-[352px] h-px bg-[#F6F5F6]"></div>
         <div className="flex flex-col items-start self-stretch border border-[color:var(--neutral-10,#DAD9DE)] rounded-[8px] border-solid overflow-hidden">
-          {list.course.map((course) => {
+          {list.course.map((course, key) => {
             return (
-              <div className="course-item-active">
+              <div key={key} className="course-item-active">
                 <span className="w-[140px] text-xs not-italic font-medium leading-4 tracking-[-0.12px]">
                   {course.title}
                 </span>
@@ -99,6 +99,7 @@ const Assessment = () => {
             <Image
               className="flex w-8 h-8 justify-center items-center"
               src={arrow_back_boxed}
+              alt=""
             />
           </div>
           <div className="flex flex-col items-start gap-4 self-stretch pt-6 pb-0 px-6">
@@ -164,7 +165,7 @@ const Assessment = () => {
               </h3>
             </div>
             <button className="flex bg-[#1C1A24] justify-center items-center gap-1 pl-3.5 pr-[15px] py-[11px] rounded-lg">
-              <Image src={ic_plus} />
+              <Image src={ic_plus} alt="" />
               <span className="text-[color:var(--grey-on-black-white,#FFF)] text-center text-sm not-italic font-normal leading-[14px]">
                 New assessment
               </span>
@@ -172,7 +173,7 @@ const Assessment = () => {
           </div>
           {unit_list.map((unit, index) => {
             return (
-              <div className="flex w-full flex-col items-start">
+              <div key={index} className="flex w-full flex-col items-start">
                 <div className="flex w-full flex-row justify-between items-start gap-2.5 pl-8 pr-[55px] pt-2.5 pb-3">
                   <p className="unit-text">
                     {"Unit "}

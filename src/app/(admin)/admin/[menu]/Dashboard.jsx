@@ -25,7 +25,7 @@ const Dashboard = () => {
               {info.figure}
             </h3>
             <div className="flex items-center gap-1 self-stretch">
-              <Image src={info.icon} />
+              <Image src={info.icon} alt="" />
               <span className="text-[color:var(--success-90,#05603A)] text-sm not-italic font-medium leading-[18px] tracking-[-0.14px]">
                 {info.percentage}%
               </span>
@@ -185,7 +185,7 @@ const Dashboard = () => {
                         class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                       >
                         <div className="w-8 h-8 shrink-0">
-                          <Image src={val.logo} />
+                          <Image src={val.logo} alt="" />
                         </div>
                       </th>
                       <td class="px-6 py-4 border-l-[color:var(--neutral-10,#DAD9DE)] border-solid flex-[1_0_0] text-[color:var(--neutral-80,#1C1A24)] text-xs not-italic font-medium leading-4 tracking-[-0.15px]">
@@ -220,10 +220,10 @@ const Dashboard = () => {
                         {val.students}
                       </td>
                       <td class="px-6 py-4">
-                        <Image src={val.confirmation} />
+                        <Image src={val.confirmation} alt="" />
                       </td>
                       <td class="px-6 py-4">
-                        <Image src={ic_menu} />
+                        <Image src={ic_menu} alt="" />
                       </td>
                       {/* <td class="px-6 py-4 text-right">
                     <a

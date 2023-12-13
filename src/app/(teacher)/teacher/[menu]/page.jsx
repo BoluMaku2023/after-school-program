@@ -45,6 +45,7 @@ const Menu = ({ menu }) => {
                   : menu.icon
               }
               className="iconn"
+              alt=""
             />
             <p className="flex-[1_0_0] text-[color:var(--neutral-10,#DAD9DE)] font-inter not-italic font-medium leading-[18px] tracking-[-0.14px]">
               {menu.title}
@@ -96,7 +97,7 @@ export default function Page({ params }) {
         <div className="flex flex-col items-start gap-4">
           <div className="flex w-[273px] flex-col items-start gap-2.5 px-9 py-8">
             <div className="flex items-start gap-2">
-              <Image src={logo_w} />
+              <Image src={logo_w} alt="" />
               <div className="flex flex-col items-start gap-0.5">
                 <h2 className="text-[color:var(--grey-on-black-white,#FFF)] text-base font-mabry-pro not-italic font-medium leading-[normal]">
                   AFTER-SCHOOL
