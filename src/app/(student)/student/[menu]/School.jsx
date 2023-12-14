@@ -164,9 +164,12 @@ const CourseModule = ({ tabb0, selectedCourse }) => {
                     </div>
                     {index == 0 ? (
                       <div className="flex flex-col w-full">
-                        {content.part.map((val) => {
+                        {content.part.map((val, key) => {
                           return (
-                            <div className="flex w-full items-center gap-2 border-r-[color:var(--Neutral-5,#F6F5F6)] border-b-[color:var(--Neutral-5,#F6F5F6)] pr-3 border-r border-solid border-b">
+                            <div
+                              key={key}
+                              className="flex w-full items-center gap-2 border-r-[color:var(--Neutral-5,#F6F5F6)] border-b-[color:var(--Neutral-5,#F6F5F6)] pr-3 border-r border-solid border-b"
+                            >
                               <div className="w-0.5 h-14 shrink-0 bg-[#704AC9]"></div>
                               <Image src={val.icon} alt="icon" />
                               <p className="flex-[1_0_0] text-[color:var(--Neutral-90,#0E0D12)] text-sm not-italic font-medium leading-[18px] tracking-[-0.14px]">
