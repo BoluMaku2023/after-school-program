@@ -45,13 +45,33 @@ import ic_at from "./ic_at.svg";
 import ic_phone from "./ic_phone.svg";
 import ic_drag from "./ic_drag.svg";
 import plus from "./plus.svg";
+import TextIndent from "./TextIndent.svg";
+import assignment from "./assignment.svg";
+import Link from "./Link.svg";
+import gradebook_icon from "./gradebook_icon.svg";
+import ic_gradebook_active from "./ic_gradebook_active.svg";
 import ic_edit_profile from "./ic_edit_profile.png";
 import pending_review from "./pending_review.png";
 import reviewed from "./reviewed.png";
 import pass from "./pass.png";
+import rank from "./rank.png";
+import excellent from "./excellent.png";
+import good from "./good.png";
+import poor from "./poor.png";
+import maths_card from "./maths_card.png";
 
 export {
   ic_phone,
+  poor,
+  good,
+  excellent,
+  gradebook_icon,
+  assignment,
+  Link,
+  TextIndent,
+  rank,
+  maths_card,
+  ic_gradebook_active,
   plus,
   english_card,
   google,

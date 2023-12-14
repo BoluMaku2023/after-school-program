@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import "./globals.scss";
+import "./globals.css";
 import localFont from "next/font/local";
 import mabry from "@/assets";
 

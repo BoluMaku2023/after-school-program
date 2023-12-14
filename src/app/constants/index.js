@@ -24,6 +24,14 @@ const {
   ic_profile_active,
   ic_assess_active,
   ic_schl_active,
+  ic_gradebook_active,
+  gradebook_icon,
+  TextIndent,
+  Link,
+  assignment,
+  poor,
+  good,
+  excellent,
 } = require("@/assets");
 
 const admin_dhb_menu1 = [
@@ -94,6 +102,26 @@ const teacher_dhb_menu1 = [
     link: "/teacher/assessment",
   },
 ];
+const student_dhb_menu1 = [
+  {
+    title: "School",
+    icon: schl_icon,
+    active_icon: ic_schl_active,
+    link: "/student/school",
+  },
+  {
+    title: "Assessment",
+    icon: assessment_icon,
+    active_icon: ic_assess_active,
+    link: "/student/assessment",
+  },
+  {
+    title: "Gradebook",
+    active_icon: ic_gradebook_active,
+    icon: gradebook_icon,
+    link: "/student/gradebook",
+  },
+];
 const teacher_student_profile = [
   {
     name: "Jennifer Okafor",
@@ -158,6 +186,20 @@ const teacher_dhb_menu2 = [
     link: "/teacher/inbox",
   },
 ];
+const student_dhb_menu2 = [
+  {
+    title: "Profile",
+    active_icon: ic_profile_active,
+    icon: profile_icon,
+    link: "/student/profile",
+  },
+  {
+    title: "Inbox",
+    active_icon: ic_inbox_active,
+    icon: ic_inbox,
+    link: "/student/inbox",
+  },
+];
 const teacher_dhb_menu3 = [
   {
     title: "Support",
@@ -170,6 +212,20 @@ const teacher_dhb_menu3 = [
     active_icon: ic_settings_active,
     icon: ic_settings,
     link: "/teacher/settings",
+  },
+];
+const student_dhb_menu3 = [
+  {
+    title: "Support",
+    active_icon: ic_support_active,
+    icon: ic_support,
+    link: "/student/support",
+  },
+  {
+    title: "Settings",
+    active_icon: ic_settings_active,
+    icon: ic_settings,
+    link: "/student/settings",
   },
 ];
 const analytics_info = [
@@ -410,6 +466,108 @@ const assessment_list = [
     ],
   },
 ];
+const maths_content = [
+  {
+    name: "Numerical Processes 1: Surds",
+    part: [
+      {
+        color: "#704AC9",
+        title: "Addition and Subtraction of Surds",
+        icon: TextIndent,
+      },
+      {
+        color: "#704AC9",
+        title: "Multiplication and Division of Surds",
+        icon: TextIndent,
+      },
+      {
+        color: "#039855",
+        title: "New School Mathematics for SSS3.pdf",
+        icon: Link,
+      },
+      {
+        color: "#F04438",
+        title: "Assignment: Surds",
+        icon: assignment,
+      },
+    ],
+  },
+  {
+    name: "Numerical Processes 2: Theory of Logarithms",
+    part: [
+      {
+        color: "#704AC9",
+        title: "Addition and Subtraction of Surds",
+        icon: TextIndent,
+      },
+      {
+        color: "#704AC9",
+        title: "Multiplication and Division of Surds",
+        icon: TextIndent,
+      },
+      {
+        color: "#039855",
+        title: "New School Mathematics for SSS3.pdf",
+        icon: Link,
+      },
+      {
+        color: "#F04438",
+        title: "Assignment: Surds",
+        icon: assignment,
+      },
+    ],
+  },
+  {
+    name: "Algebra Processes 1: Linear and Quadratic Equations",
+    part: [
+      {
+        color: "#704AC9",
+        title: "Addition and Subtraction of Surds",
+        icon: TextIndent,
+      },
+      {
+        color: "#704AC9",
+        title: "Multiplication and Division of Surds",
+        icon: TextIndent,
+      },
+      {
+        color: "#039855",
+        title: "New School Mathematics for SSS3.pdf",
+        icon: Link,
+      },
+      {
+        color: "#F04438",
+        title: "Assignment: Surds",
+        icon: assignment,
+      },
+    ],
+  },
+  {
+    name: "Mensuration: Length, Area, Volume",
+    part: [
+      {
+        color: "#704AC9",
+        title: "Addition and Subtraction of Surds",
+        icon: TextIndent,
+      },
+      {
+        color: "#704AC9",
+        title: "Multiplication and Division of Surds",
+        icon: TextIndent,
+      },
+      {
+        color: "#039855",
+        title: "New School Mathematics for SSS3.pdf",
+        icon: Link,
+      },
+      {
+        color: "#F04438",
+        title: "Assignment: Surds",
+        icon: assignment,
+      },
+    ],
+  },
+];
 const unit_list = [
   {
     name: "Part of Speech",
@@ -437,6 +595,120 @@ const unit_list = [
     duration: "40",
     date: "18/12/23",
     time: "2:00 PM",
+  },
+];
+const english_assessment = [
+  {
+    name: "Part of Speech",
+    score: "45",
+    attainable: "100",
+    points: "15pts",
+
+    date: "18/12/23",
+    status: poor,
+  },
+  {
+    name: "Vocabulary Development",
+    score: "67",
+    attainable: "100",
+    points: "15pts",
+
+    date: "18/12/23",
+    status: good,
+  },
+  {
+    name: "Active and Passive Voice",
+    score: "89",
+    attainable: "100",
+    points: "15pts",
+
+    date: "18/12/23",
+    status: excellent,
+  },
+  {
+    name: "Assessment name",
+    score: "82",
+    attainable: "100",
+    points: "15pts",
+
+    date: "18/12/23",
+    status: excellent,
+  },
+];
+const unit_list2 = [
+  {
+    name: "Numerical Processes 1: Surds",
+    questions: "60",
+    points: "30",
+    teacher: "Bosun",
+    duration: "30",
+    date: "18/12/23",
+    time: "6:00 PM",
+  },
+  {
+    name: "Numerical Processes 2: Theory of Logarithms",
+    questions: "60",
+    points: "60",
+    teacher: "Odun",
+    duration: "40",
+    date: "18/12/23",
+    time: "2:00 PM",
+  },
+  {
+    name: "Algebra Processes 1: Linear and Quadratic Equations",
+    questions: "60",
+    points: "60",
+    teacher: "Odun",
+    duration: "40",
+    date: "18/12/23",
+    time: "2:00 PM",
+  },
+  {
+    name: "Mensuration: Length, Area, Volume",
+    questions: "60",
+    points: "60",
+    teacher: "Odun",
+    duration: "40",
+    date: "18/12/23",
+    time: "2:00 PM",
+  },
+];
+const maths_assessment = [
+  {
+    name: "Numerical Processes 1: Surds",
+    score: "42",
+    attainable: "100",
+    points: "15pts",
+
+    date: "18/12/23",
+    status: poor,
+  },
+  {
+    name: "Numerical Processes 2: Theory of Logarithms",
+    score: "70",
+    attainable: "100",
+    points: "15pts",
+
+    date: "18/12/23",
+    status: excellent,
+  },
+  {
+    name: "Algebra Processes 1: Linear and Quadratic Equations",
+    score: "60",
+    attainable: "100",
+    points: "15pts",
+
+    date: "18/12/23",
+    status: good,
+  },
+  {
+    name: "Mensuration: Length, Area, Volume",
+    score: "20",
+    attainable: "100",
+    points: "15pts",
+
+    date: "18/12/23",
+    status: poor,
   },
 ];
 const admin_accounts_notification_prefs = [
@@ -490,6 +762,8 @@ export {
   admin_dhb_menu1,
   admin_dhb_menu2,
   admin_dhb_menu3,
+  student_dhb_menu2,
+  student_dhb_menu3,
   teacher_dhb_menu1,
   teacher_dhb_menu2,
   teacher_dhb_menu3,
@@ -498,7 +772,12 @@ export {
   school_table,
   school_table2,
   assessment_list,
+  maths_content,
   unit_list,
+  english_assessment,
+  maths_assessment,
+  unit_list2,
+  student_dhb_menu1,
   admin_accounts_notification_prefs,
   ticket_list,
   admin_system_notification_prefs,
