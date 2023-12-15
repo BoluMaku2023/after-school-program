@@ -349,10 +349,31 @@ const Gradebook = () => {
               alt=""
             />
           </div>
+
           <div className="flex flex-col items-start gap-4 self-stretch pt-6 pb-0 px-6">
             <div className="flex flex-col items-start gap-2 self-stretch">
-              <h3 className="self-stretch text-[color:var(--neutral-40,#6C667A)] text-[10px] not-italic font-medium leading-4 tracking-[0.5px] uppercase">
-                MAYFLOWER SCHOOL, IKENNE
+              <h3 className="self-stretch text-[color:var(--neutral-40,#6C667A)] text-[10px] not-italic font-medium leading-4 tracking-[0.5px]">
+                Select student
+              </h3>
+
+              <div className="flex w-[270px] justify-between cursor-pointer items-center gap-2 self-stretch border border-[color:var(--Neutral-10,#DAD9DE)] px-3.5 py-2 rounded-lg border-solid hover:bg-gray-50">
+                <div className="flex items-center gap-2 flex-[1_0_0]">
+                  <Image
+                    src="https://res.cloudinary.com/djogev23i/image/upload/v1702444058/Avatar_a2xp74.png"
+                    alt="avatar"
+                    width={32}
+                    height={32}
+                  />
+                  <h3 className="flex-[1_0_0] text-[color:var(--neutral-80,#1C1A24)] text-sm not-italic font-medium leading-[18px] tracking-[-0.14px]">
+                    Jennifer Okafor
+                  </h3>
+                </div>
+                <Image src={ic_arrow_down} alt="arrow" />
+              </div>
+            </div>
+            <div className="flex flex-col items-start gap-2 self-stretch">
+              <h3 className="self-stretch text-[color:var(--neutral-40,#6C667A)] text-[10px] not-italic font-medium leading-4 tracking-[0.5px]">
+                Course
               </h3>
               <div className="w-[352px] h-px bg-[#F6F5F6]"></div>
               <div className="flex flex-col items-start self-stretch border border-[color:var(--neutral-10,#DAD9DE)] rounded-[8px] border-solid overflow-hidden">
@@ -377,27 +398,6 @@ const Gradebook = () => {
                   <span className="w-[140px] text-xs not-italic font-medium leading-4 tracking-[-0.12px]">
                     Mathematics
                   </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-start gap-4 self-stretch pt-6 pb-0 px-6">
-            <div className="flex flex-col items-start gap-2 self-stretch">
-              <h3 className="self-stretch text-[color:var(--neutral-40,#6C667A)] text-[10px] not-italic font-medium leading-4 tracking-[0.5px] uppercase">
-                teacher
-              </h3>
-              <div className="w-[270px] h-px bg-[#F6F5F6]"></div>
-              <div className="flex w-[270px] items-center gap-4">
-                <div className="flex items-center gap-2 flex-[1_0_0]">
-                  <Image
-                    src="https://res.cloudinary.com/djogev23i/image/upload/v1702444058/Avatar_a2xp74.png"
-                    alt="avatar"
-                    width={32}
-                    height={32}
-                  />
-                  <h3 className="flex-[1_0_0] text-[color:var(--neutral-80,#1C1A24)] text-sm not-italic font-medium leading-[18px] tracking-[-0.14px]">
-                    Jennifer Okafor
-                  </h3>
                 </div>
               </div>
             </div>

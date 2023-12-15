@@ -12,8 +12,8 @@ const myFont = localFont({
 });
 
 export const metadata = {
-  title: "ASP | Student",
-  description: "After School Program Student's dashboard",
+  title: "ASP | Parent",
+  description: "After School Program Parent's dashboard",
 };
 
 export default function RootLayout({ children }) {

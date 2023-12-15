@@ -122,6 +122,21 @@ const student_dhb_menu1 = [
     link: "/student/gradebook",
   },
 ];
+const parent_dhb_menu1 = [
+  {
+    title: "School",
+    icon: schl_icon,
+    active_icon: ic_schl_active,
+    link: "/parent/school",
+  },
+
+  {
+    title: "Gradebook",
+    active_icon: ic_gradebook_active,
+    icon: gradebook_icon,
+    link: "/parent/gradebook",
+  },
+];
 const teacher_student_profile = [
   {
     name: "Jennifer Okafor",
@@ -186,6 +201,20 @@ const teacher_dhb_menu2 = [
     link: "/teacher/inbox",
   },
 ];
+const parent_dhb_menu2 = [
+  {
+    title: "Profile",
+    active_icon: ic_profile_active,
+    icon: profile_icon,
+    link: "/parent/profile",
+  },
+  {
+    title: "Inbox",
+    active_icon: ic_inbox_active,
+    icon: ic_inbox,
+    link: "/parent/inbox",
+  },
+];
 const student_dhb_menu2 = [
   {
     title: "Profile",
@@ -212,6 +241,20 @@ const teacher_dhb_menu3 = [
     active_icon: ic_settings_active,
     icon: ic_settings,
     link: "/teacher/settings",
+  },
+];
+const parent_dhb_menu3 = [
+  {
+    title: "Support",
+    active_icon: ic_support_active,
+    icon: ic_support,
+    link: "/parent/support",
+  },
+  {
+    title: "Settings",
+    active_icon: ic_settings_active,
+    icon: ic_settings,
+    link: "/parent/settings",
   },
 ];
 const student_dhb_menu3 = [
@@ -764,6 +807,9 @@ export {
   admin_dhb_menu3,
   student_dhb_menu2,
   student_dhb_menu3,
+  parent_dhb_menu1,
+  parent_dhb_menu2,
+  parent_dhb_menu3,
   teacher_dhb_menu1,
   teacher_dhb_menu2,
   teacher_dhb_menu3,

@@ -49,6 +49,7 @@ import TextIndent from "./TextIndent.svg";
 import assignment from "./assignment.svg";
 import Link from "./Link.svg";
 import gradebook_icon from "./gradebook_icon.svg";
+import ic_download from "./ic_download.svg";
 import ic_gradebook_active from "./ic_gradebook_active.svg";
 import ic_edit_profile from "./ic_edit_profile.png";
 import pending_review from "./pending_review.png";
@@ -56,6 +57,8 @@ import reviewed from "./reviewed.png";
 import pass from "./pass.png";
 import rank from "./rank.png";
 import excellent from "./excellent.png";
+import english_div from "./english_div.png";
+import maths_div from "./maths_div.png";
 import good from "./good.png";
 import poor from "./poor.png";
 import maths_card from "./maths_card.png";
@@ -64,9 +67,12 @@ export {
   ic_phone,
   poor,
   good,
+  ic_download,
   excellent,
   gradebook_icon,
   assignment,
+  english_div,
+  maths_div,
   Link,
   TextIndent,
   rank,
